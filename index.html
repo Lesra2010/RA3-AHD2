@@ -5,18 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La Canasta Básica</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-success">
     <div class="container">
-      <a class="navbar-brand" href="#inicio">La Canasta Básica</a>
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="#inicio">Inicio</a>
-          <a class="nav-link" href="#informacion">Información</a>
-          <a class="nav-link" href="#productos">Productos</a>
-          <a class="nav-link" href="#catalogo">Catálogo</a>
-          <a class="nav-link" href="#multimedia">Multimedia</a>
-          <a class="nav-link" href="#contacto">Contacto</a>
+      <a class="navbar-brand" href="#inicio">Bienvenidos a la tienda virtual</a>
+        <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#menu">  
+            <span class="navbar-toggler-icon"></span> 
+        </button>
+        <div class="collapse navbar-collapse" id="menu"> 
+            <div class="navbar-nav ms-auto"> 
+                <a class="nav-link" href="#inicio">Inicio</a> 
+                <a class="nav-link" href="#informacion">Información</a> 
+                <a class="nav-link" href="#productos">Productos</a> 
+                <a class="nav-link" href="#catalogo">Catálogo</a> 
+                <a class="nav-link" href="#multimedia">Multimedia</a> 
+                <a class="nav-link" href="#contacto">Contacto</a> 
+            </div> 
         </div>
     </div>
   </nav>
@@ -30,47 +39,118 @@
       <p>Ofrecemos productos básicos para toda la familia.</p>
     </section><hr>
     <section id="productos">
-      <h2>Productos</h2>
-      <ul>
-        <li>Arroz</li>
-        <li>Frijol</li>
-        <li>Azúcar</li>
-        <li>Leche</li>
-      </ul>
-      <ol>
-        <li>Seleccionar productos</li>
-        <li>Realizar pedido</li>
-        <li>Pagar</li>
-        <li>Recibir compra</li>
-      </ol>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Productos</h2>
+          <ul>
+            <li>Arroz</li>
+            <li>Frijol</li>
+            <li>Azúcar</li>
+            <li>Leche</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h2>Proceso de Compra</h2>
+          <ol>
+            <li>Seleccionar productos</li>
+            <li>Realizar pedido</li>
+            <li>Pagar</li>
+            <li>Recibir compra</li>
+          </ol>
+        </div>
+      </div>
     </section><hr>
     <section id="catalogo">
-      <h2>Catálogo</h2>
-      <table class="table table-bordered"><tr>
-        <th>Producto</th>
-        <th>Precio</th></tr><tr>
-        <td>Arroz</td>
-        <td>Q10</td></tr><tr>
-        <td>Frijol</td>
-        <td>Q12</td></tr>
-      </table>
-    </section><hr>
+      <h2 class="text-center mb-4">Catálogo</h2>
+      <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+              <thead>
+                  <tr>
+                      <th>Producto</th>
+                      <th>Precio</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Arroz</td>
+                      <td>Q10</td>
+                  </tr>
+                  <tr>
+                      <td>Frijol</td>
+                      <td>Q12</td>
+                  </tr>
+                  <tr>
+                      <td>Azúcar</td>
+                      <td>Q8</td>
+                  </tr>
+                  <tr>
+                      <td>Leche</td>
+                      <td>Q11</td>
+                  </tr>
+                  <tr>
+                      <td>Aceite</td>
+                      <td>Q18</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+    </section>
     <section id="multimedia">
-      <h2>Multimedia</h2>
-      <img src="imagen1.jpg" class="img-fluid" alt="Producto"><br>
-      <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/E1yUTJ35aHM"
-          title="Anuncio"
-          frameborder="0"
-          allowfullscreen>
-      </iframe><br><br>
-      <iframe src="https://www.google.com/maps?q=Guatemala&output=embed" width="600" height="300">        
-      </iframe>
+      <h2 class="text-center mb-4">Multimedia</h2>
+      <h3 class="text-center mb-3">Nuestros Productos</h3>
+      <div id="carouselProductos" class="carousel slide" data-bs-ride="carousel"> 
+          <div class="carousel-inner"> 
+              <div class="carousel-item active"> 
+                  <img src="imagen1.jpg" 
+                      class="d-block w-100" 
+                      alt="Producto 1"> 
+              </div> 
+              <div class="carousel-item"> 
+                  <img src="imagen2.jpg" 
+                      class="d-block w-100" 
+                      alt="Producto 2"> 
+              </div> 
+              <div class="carousel-item"> 
+                  <img src="imagen3.jpg" 
+                      class="d-block w-100" 
+                      alt="Producto 3"> 
+              </div> 
+          </div> 
+          <button class="carousel-control-prev" 
+                  type="button" 
+                  data-bs-target="#carouselProductos" 
+                  data-bs-slide="prev"> 
+      
+              <span class="carousel-control-prev-icon"></span>       
+          </button>      
+          <button class="carousel-control-next" 
+                  type="button" 
+                  data-bs-target="#carouselProductos" 
+                  data-bs-slide="next"> 
+      
+              <span class="carousel-control-next-icon"></span>      
+          </button> 
+      </div> 
+      <h3 class="text-center mt-5 mb-3">Promocional</h3>
+      <div class="ratio ratio-16x9">
+          <iframe
+              src="https://www.youtube.com/embed/E1yUTJ35aHM"
+              title="Anuncio"
+              allowfullscreen>
+          </iframe>
+      </div>
+      <div class="mt-5">
+          <h3 class="text-center mb-4">Ubícanos</h3>
+          <div class="ratio ratio-16x9">
+              <iframe
+                  src="https://www.google.com/maps?q=Guatemala&output=embed"
+                  allowfullscreen>
+              </iframe>
+          </div>
+      </div>
     </section><hr>
     <section id="contacto">
-      <h2>Contacto</h2>
+      <h2 class="text-center mb-4">Contacto</h2>
       <form>
         <input class="form-control" placeholder="Nombre"><br>
         <input class="form-control" type="email" placeholder="Correo"><br>
